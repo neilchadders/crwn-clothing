@@ -9,6 +9,7 @@ import { ProductsProvider } from './contexts/products.context';
 
 
 import reportWebVitals from './reportWebVitals';
+import { CartProvider } from './contexts/cart.context';
 
 
 
@@ -18,7 +19,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <ProductsProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
